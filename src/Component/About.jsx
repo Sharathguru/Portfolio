@@ -46,9 +46,9 @@ const About = () => {
         </p>
         <button className="about-button">
           <a
-            href="https://drive.google.com/file/d/1qbUQbubOOCnF_7EvAk8LfkU_PS8SLcE_/view?usp=sharing"
+            href="https://drive.google.com/drive/u/0/folders/1C_7CICpv9obNu39s0bGHsW0zQgS5dQCR"
             target="_blank"
-            rel="noopener noreferrer"
+           
           >
             Check Resume
           </a>
