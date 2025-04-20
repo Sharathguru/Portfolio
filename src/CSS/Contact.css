@@ -1,0 +1,131 @@
+#contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+    padding: 0; /* Remove extra padding */
+    color: white;
+    text-align: center;
+    position: relative;
+    margin: 5% 0 ; /* Remove any margin */
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    margin-bottom: 20px; /* Adjust margin for better spacing */
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form {
+    background-color: rgba(30, 30, 47, 0.9); /* Dark background for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Add shadow for better visibility */
+    padding: 30px; /* Add padding inside the form */
+    max-width: 600px;
+    width: 100%; /* Ensure the form takes full width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Add spacing between form elements */
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: white;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px; /* Increase padding for better usability */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    background-color: rgba(20, 20, 35, 1); /* Slightly darker input background */
+    color: white;
+    font-size: 1rem;
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: blueviolet; /* Highlight border on focus */
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 120px; /* Increase height for better usability */
+}
+
+.contact-submit-btn {
+    padding: 15px 20px; /* Increase padding for a larger button */
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase; /* Make text uppercase */
+    font-weight: bold;
+}
+
+.contact-submit-btn:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb); /* Reverse gradient on hover */
+    box-shadow: 0 0 15px blueviolet; /* Add glowing effect */
+}
+
+.copyright-section {
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px; /* Adjust spacing above copyright section */
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem; /* Adjust font size */
+    position: relative;
+    bottom: 20px; /* Remove unnecessary offset */
+    /* top: 10px; */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 480px) {
+    #contact-section {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .contact-form {
+        padding: 10px; /* Reduce padding for mobile screens */
+        max-width: 100%; /* Ensure full width */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.85rem; /* Adjust font size for smaller screens */
+    }
+
+    .contact-submit-btn {
+        font-size: 0.85rem; /* Adjust button font size */
+        padding: 8px 12px; /* Adjust button padding */
+    }
+
+    .contact-description {
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
+
+    .copyright-section {
+        width: 80%;
+        margin-top: 5px; 
+        position: relative;
+        top: 20px;
+    }
+}

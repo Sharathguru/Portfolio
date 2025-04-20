@@ -1,0 +1,107 @@
+/* Global Reset */
+body {
+    background-color: rgb(32, 21, 43);
+    font-family: Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+#Navbar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(30, 30, 47, 0.8); /* Transparent background */
+    height: 80px;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed; /* Ensure the navbar is fixed */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Make it span the full width */
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
+}
+
+#Navbar h1 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+#Name {
+    color: blueviolet;
+}
+
+#Navbar-items-all {
+    width: 40em;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.Navbar-items {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.Navbar-items:hover {
+    color: blueviolet;
+}
+
+.fa-bars {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 670px) {
+    #Navbar-items-all {
+        display: none;
+       align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: rgba(30, 30, 47, 0.9);
+        /* opacity: 0.7; */
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    #Navbar-items-all.open {
+        display: flex;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #Navbar-items-all {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background-color: rgba(30, 30, 47, 0.9);
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    #Navbar-items-all.open {
+        display: flex;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+}

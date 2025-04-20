@@ -1,0 +1,125 @@
+#skills-section {
+    position: relative;
+    top: 60px;
+    /* right: 1px; */
+    padding: 40px 40px 40px 0;
+    color: white;
+    text-align: center;
+    /* background-color: red; */
+}
+
+.skills-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.skills-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.skills-container {
+    display: grid; /* Use grid layout for better control */
+    grid-template-columns: repeat(3, 1fr); /* Ensure 3 boxes in one row */
+    gap: 20px; /* Add spacing between the skill boxes */
+    justify-content: center; /* Center the grid horizontally */
+    align-items: stretch; /* Ensure all boxes have the same height */
+}
+
+.skills-card {
+    background-color: rgba(30, 30, 47, 0.8);
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    padding: 0; /* Remove padding inside the box */
+    width: 100%; /* Allow the grid to control the width */
+    max-width: 400px; /* Set a maximum width for the boxes */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    height: 100%; /* Ensure all boxes stretch to the same height */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    /* Distribute items evenly */
+    align-items: center; /* Center items horizontally */
+    text-align: center;
+}
+
+.skills-card h3 {
+    font-size: 1.5rem;
+    margin: 20px 0; /* Add consistent spacing above and below the title */
+    color: white;
+}
+
+.skills-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr); /* Ensure consistent layout for items */
+    gap: 10px; /* Reduce spacing between skill items */
+    /* justify-content: center; */
+    width: 100%; /* Ensure items take full width */
+    padding: 10px; /* Add padding around the icons */
+}
+
+.skill-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 10px; /* Ensure consistent padding inside each skill item */
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content inside each skill item */
+    gap: 8px;
+    color: white;
+    transition: all 0.3s ease;
+    width: 100%; /* Ensure all items have the same width */
+    max-width: 150px; /* Set a maximum width for items */
+    text-align: center;
+}
+
+.skill-item:hover {
+    background-color: blueviolet;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(138, 43, 226, 0.5);
+}
+
+.skill-item i {
+    font-size: 1.8rem; /* Ensure consistent icon size */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 boxes per row on tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr; /* Show 1 box per row on smaller screens */
+    }
+}
+@media screen and (max-width: 480px) {
+    #skills-section {
+        padding: 10px; /* Adjust padding for smaller screens */
+        top: 0; /* Remove unnecessary offset */
+    }
+
+    .skills-container {
+        gap: 15px; /* Adjust gap for smaller screens */
+        grid-template-columns: 1fr; /* Stack items vertically */
+    }
+
+    .skills-card {
+        padding: 10px; /* Adjust padding for mobile screens */
+        max-width: 100%; /* Ensure full width */
+    }
+
+    .skills-icons {
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
+
+    .skill-item {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}

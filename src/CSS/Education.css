@@ -1,0 +1,141 @@
+#education-section {
+    position: relative;
+    top: 50px;
+    right: 0px;
+    padding: 60px 20px; /* Add padding for better spacing */
+    color: white;
+    text-align: center;
+    /* background-color: rgb(32, 21, 43); */
+}
+
+.education-title {
+    font-size: 2.8rem; /* Increase font size for the title */
+    margin-bottom: 20px;
+    color: white;
+}
+
+.education-description {
+    font-size: 1.2rem;
+    margin-bottom: 40px; /* Add spacing below the description */
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.education-card {
+    background-color: rgba(30, 30, 47, 0.9); /* Slightly darker background */
+    border: 2px solid blueviolet; /* Add a border */
+    border-radius: 15px; /* Increase border radius for rounded corners */
+    padding: 15px 30px; /* Reduce padding to make the card shorter */
+    width: 90%; /* Increase the maximum width */
+    height: 40%;
+    margin: 40px auto; /* Increase spacing between cards */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Add a stronger shadow */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+    line-height: 1; /* Reduce line height for less vertical spacing */
+   
+}
+
+.education-card:hover {
+    transform: scale(1.03); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.7); /* Add a glowing shadow */
+}
+
+.education-card h3 {
+    font-size: 1.8rem; /* Increase font size for the institution name */
+    margin-bottom: 15px;
+    color: white;
+}
+
+.education-card p {
+    font-size: 1.1rem; /* Slightly increase font size for details */
+    line-height: 1.2; /* Increase line height for better readability */
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px; /* Reduce margin between paragraphs */
+    text-align: justify;
+}
+
+.download-resume-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px; /* Adjust padding for a larger button */
+    background-color: blueviolet;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px; /* Slightly rounder corners */
+    font-size: 1.1rem; /* Increase font size */
+    transition: all 0.3s ease;
+}
+
+.download-resume-btn:hover {
+    background-color: darkviolet;
+    box-shadow: 0 0 15px blueviolet; /* Add a glowing effect on hover */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    #education-section {
+        padding: 40px 10px; /* Reduce padding for tablets */
+    }
+
+    .education-card {
+        padding: 20px; /* Adjust padding for smaller screens */
+        max-width: 90%; /* Reduce card width for tablets */
+    }
+
+    .education-card h3 {
+        font-size: 1.6rem; /* Adjust font size for tablets */
+    }
+
+    .education-card p {
+        font-size: 1rem; /* Adjust font size for tablets */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #education-section {
+        padding: 30px 10px; /* Further reduce padding for smaller screens */
+    }
+
+    .education-card {
+        padding: 15px; /* Reduce padding for smaller screens */
+        max-width: 100%; /* Make the card take full width */
+    }
+
+    .education-card h3 {
+        font-size: 1.4rem; /* Adjust font size for smaller screens */
+    }
+
+    .education-card p {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    .download-resume-btn {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 10px 15px; /* Adjust button padding */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #education-section {
+        padding: 10px; /* Reduce padding for smaller screens */
+        top: 0; /* Remove unnecessary offset */
+    }
+
+    .education-card {
+        padding: 10px; /* Reduce padding for mobile screens */
+        max-width: 100%; /* Ensure full width */
+    }
+
+    .education-card h3 {
+        font-size: 1.2rem; /* Adjust font size for mobile screens */
+    }
+
+    .education-card p {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+    }
+
+    .download-resume-btn {
+        font-size: 0.8rem; /* Adjust button font size */
+        padding: 8px 12px; /* Adjust button padding */
+    }
+}
