@@ -4,7 +4,7 @@ import Project from "./Project";
 import Education from "./Education";
 import Contact from "./Contact";
 import "../CSS/About.css";
-import ProfileImage from "c:/Users/KARTHIK SARATH/Videos/12.png"; // Import the image
+import ProfileImage from "../assets/12.png"; // Updated the image path
 
 const About = () => {
   const roles = ["Web Developer", "React JS Developer", "Backend Developer"];
@@ -42,7 +42,7 @@ const About = () => {
           I am a <span className="animated-text">{typedText}</span>
         </h3>
         <p className="about-content">
-        A skilled full stack developer with strong frontend and backend foundations.Proficient in React.js, HTML, CSS, Tailwind CSS, Java Spring, and Node.js/Express.Passionate about modern web technologies and creating responsive, user-friendly interfaces.Collaborative, creative, and committed to delivering high-quality, innovative solutions.
+          A skilled full stack developer with strong frontend and backend foundations. Proficient in React.js, HTML, CSS, Tailwind CSS, Java Spring, and Node.js/Express. Passionate about modern web technologies and creating responsive, user-friendly interfaces. Collaborative, creative, and committed to delivering high-quality, innovative solutions.
         </p>
         <button className="about-button">
           <a

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser"; // Ensure this matches the installed package
 import "../CSS/Contact.css";
 
 const Contact = () => {
