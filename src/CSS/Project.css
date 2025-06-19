@@ -105,7 +105,7 @@
 .project-description {
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.8);
-    text-align: left; /* Remove text justification */
+    text-align: justify; /* Remove text justification */
     white-space: normal; /* Ensure proper spacing and prevent extra gaps */
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../CSS/Project.css";
 import expenseImg from "../assets/expense.png";
-import e_commerce from "../assets/e-commerce.png";
+import wayfarer from "../assets/wayfarer.png";
 import API from "../assets/Api.png";
 import FORM from "../assets/Form.png";
 import REST from "../assets/Rest.png";
@@ -13,33 +13,33 @@ const Project = () => {
       category: "Website",
       year: "2025",
       description:
-        "An E-commerce webpage built using React. It features a responsive design, product pages, and a shopping cart.",
-      technologies: ["React"],
-      image: e_commerce,
-      codeLink: "https://github.com/example/ecommerce",
-      liveLink: "https://ecommerce-live.example.com",
+        "Wayfarer Travel is a MERN stack app using Google Maps and Gemini API to generate AI-powered itineraries.",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe", "Google Maps API", "Gemini API"],
+      image: wayfarer,
+      codeLink: "https://github.com/Sharathguru/WayFarer.git",
+      liveLink: "https://way-farer-rho.vercel.app/",
     },
     {
       title: "Expenses Tracker",
       category: "Web-Apps",
-      year: "2023",
+      year: "2024",
       description:
         "A React-based application to track expenses with dynamic charts and filtering options.",
-      technologies: ["React"],
+      technologies: ["React","Rechart", "Node.js", "piechart", "graph"],
       image: expenseImg,
-      codeLink: "https://github.com/example/expenses",
-      liveLink: "https://expenses-tracker.example.com",
+      codeLink: "https://github.com/Sharathguru/Expenses.git",
+      liveLink: "https://expenses-person.vercel.app/",
     },
     {
       title: "Search Images",
       category: "Web-Apps",
-      year: "2023",
+      year: "2024",
       description:
         "A React application that uses an API to search and display images dynamically.",
-      technologies: ["React", "API"],
+      technologies: ["React","context API","Unsplash API","Css"],
       image: API,
-      codeLink: "#",
-      liveLink: "#",
+      codeLink: "https://github.com/Sharathguru/Image_API.git",
+      liveLink: "https://image-api-indol.vercel.app/",
     },
     {
       title: "Form Management",
