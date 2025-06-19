@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from "react";
-import "../CSS/Project.css"; // Import Project-specific CSS
+import React, { useState } from "react";
+import "../CSS/Project.css";
 import expenseImg from "../assets/expense.png";
-import e_commerce from '../assets/e-commerce.png';
-import API from '../assets/Api.png';
-import FORM from '../assets/Form.png';
-import REST from '../assets/Rest.png';
-
+import e_commerce from "../assets/e-commerce.png";
+import API from "../assets/Api.png";
+import FORM from "../assets/Form.png";
+import REST from "../assets/Rest.png";
 
 const Project = () => {
   const allProjects = [
     {
-      title: "E-commerce Webpage",
+      title: "WayFarer",
       category: "Website",
-      year: "2023",
+      year: "2025",
       description:
         "An E-commerce webpage built using React. It features a responsive design, product pages, and a shopping cart.",
       technologies: ["React"],
-      image:e_commerce,
-      codeLink: "#",
-      liveLink: "#",
+      image: e_commerce,
+      codeLink: "https://github.com/example/ecommerce",
+      liveLink: "https://ecommerce-live.example.com",
     },
     {
       title: "Expenses Tracker",
@@ -28,8 +27,8 @@ const Project = () => {
         "A React-based application to track expenses with dynamic charts and filtering options.",
       technologies: ["React"],
       image: expenseImg,
-      codeLink: "#",
-      liveLink: "#",
+      codeLink: "https://github.com/example/expenses",
+      liveLink: "https://expenses-tracker.example.com",
     },
     {
       title: "Search Images",
@@ -38,7 +37,9 @@ const Project = () => {
       description:
         "A React application that uses an API to search and display images dynamically.",
       technologies: ["React", "API"],
-      image: API, // Replace with the actual image path
+      image: API,
+      codeLink: "#",
+      liveLink: "#",
     },
     {
       title: "Form Management",
@@ -47,7 +48,9 @@ const Project = () => {
       description:
         "A full-stack application using React for the frontend and Spring Framework with MySQL for the backend.",
       technologies: ["React", "Spring Framework", "MySQL"],
-      image:FORM, // Replace with the actual image path
+      image: FORM,
+      codeLink: "#",
+      liveLink: "#",
     },
     {
       title: "Restaurant Webpage",
@@ -56,38 +59,38 @@ const Project = () => {
       description:
         "A restaurant webpage built using HTML, CSS, JavaScript, and Node.js. It features a responsive design and dynamic menu.",
       technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
-      image: REST, // Replace with the actual image path
+      image: REST,
+      codeLink: "#",
+      liveLink: "#",
     },
-  
   ];
 
   const [filteredProjects, setFilteredProjects] = useState(allProjects);
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState(null);
-  const [clickedProject, setClickedProject] = useState(null);
+  const [activeIdx, setActiveIdx] = useState(null);
 
   const handleFilter = (category) => {
     setActiveFilter(category);
-    if (category === "All") {
-      setFilteredProjects(allProjects);
-    } else {
-      setFilteredProjects(allProjects.filter((project) => project.category === category));
-    }
+    setFilteredProjects(
+      category === "All"
+        ? allProjects
+        : allProjects.filter((project) => project.category === category)
+    );
   };
 
-  // const openModal = (project) => {
-  //   setSelectedProject(project);
-  //   document.body.classList.add("modal-open"); // Disable scrolling
-  // };
+  const openModal = (project) => {
+    setSelectedProject(project);
+    document.body.classList.add("modal-open");
+  };
 
-  // const closeModal = () => {
-  //   setSelectedProject(null);
-  //   document.body.classList.remove("modal-open"); // Enable scrolling
-  // };
+  const closeModal = () => {
+    setSelectedProject(null);
+    document.body.classList.remove("modal-open");
+  };
 
-  const handleProjectClick = (index) => {
-    setClickedProject(index);
-    setTimeout(() => setClickedProject(null), 1000); // Reset after animation
+  const handleCardClick = (idx) => {
+    setActiveIdx(idx === activeIdx ? null : idx);
   };
 
   return (
@@ -96,6 +99,7 @@ const Project = () => {
       <p className="projects-description">
         I have worked on a wide range of projects. From web apps to landing pages, here are some of my projects.
       </p>
+
       <div className="filter-buttons">
         {["All", "Website", "Web-Apps", "Landing Page"].map((category) => (
           <button
@@ -107,15 +111,13 @@ const Project = () => {
           </button>
         ))}
       </div>
+
       <div className="projects-container">
         {filteredProjects.map((project, index) => (
           <div
-            className={`project-card ${clickedProject === index ? "move-project" : ""}`}
+            className="project-card"
             key={index}
-            onClick={() => {
-              handleProjectClick(index);
-              openModal(project);
-            }}
+            onClick={() => handleCardClick(index)}
           >
             <div className="project-image">
               <img src={project.image} alt={project.title} />
@@ -132,6 +134,56 @@ const Project = () => {
               <p className="project-year">{project.year}</p>
               <p className="project-description">{project.description}</p>
             </div>
+            {activeIdx === index && (
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: 16,
+                  marginTop: 16
+                }}
+                onClick={e => e.stopPropagation()}
+              >
+                <a
+                  href={project.codeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    background: "#232136",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: 8,
+                    padding: "12px 32px",
+                    fontWeight: 600,
+                    fontSize: 16,
+                    textDecoration: "none",
+                    transition: "background 0.2s"
+                  }}
+                  onClick={e => e.stopPropagation()}
+                >
+                  View Code
+                </a>
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    background: "#a259ff",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: 8,
+                    padding: "12px 32px",
+                    fontWeight: 600,
+                    fontSize: 16,
+                    textDecoration: "none",
+                    transition: "background 0.2s"
+                  }}
+                  onClick={e => e.stopPropagation()}
+                >
+                  View Project
+                </a>
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -148,13 +200,28 @@ const Project = () => {
             <h3>{selectedProject.title}</h3>
             <p className="project-year">{selectedProject.year}</p>
             <p className="project-description">{selectedProject.description}</p>
+
             <div className="modal-buttons">
-              <a href={selectedProject.codeLink} target="_blank" rel="noopener noreferrer" className="view-code">
-                View Code
-              </a>
-              <a href={selectedProject.liveLink} target="_blank" rel="noopener noreferrer" className="view-live">
-                View Live App
-              </a>
+              {selectedProject.codeLink && selectedProject.codeLink !== "#" && (
+                <a
+                  href={selectedProject.codeLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="view-code"
+                >
+                  View Code
+                </a>
+              )}
+              {selectedProject.liveLink && selectedProject.liveLink !== "#" && (
+                <a
+                  href={selectedProject.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="view-live"
+                >
+                  View Live App
+                </a>
+              )}
             </div>
           </div>
         </div>
